@@ -16,24 +16,24 @@
 
 
   <body>
-  <div class = "vertical">
-  <h5>My name</h5>
-    <nav class="nav flex-column">
-      <%= navbar_button_name(current_user) %>
-      <div><%= navbar_button_home %></div>
-    </nav>
-</div>
-    <div class = "horizontal">
-      <div><%= navbar_button_home %></div>
+    <div class = "vertical">
+      <nav class="nav flex-column">
+        <%= navbar_button_name(current_user) %>
+        <%= navbar_button_home %>
+      </nav>
+    </div>
+
+    <nav>
+    <div class = "horizontal p-3 mb-2 bg-primary text-white">
         <div>
-          <form class="d-flex">
-            
+          <form class="d-flex nav justify-content-end">
             <%= navbar_button_sign_out %>
             <%= navbar_button_sign_up %>
             <%= navbar_button_log_in %>
           </form>
         </div>
     </div>
+    </nav>
     <%= yield %>
 
 
