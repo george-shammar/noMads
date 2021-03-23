@@ -20,12 +20,15 @@
 
 
     <div class = "horizontal">
-      <nav class="navbar navbar-dark bg-primary">
-        
-        <%= link_to new_opinion_path do %>
-          <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-        <% end %>
-      </nav>
+      <div><%= navbar_button_home %></div>
+        <div>
+          <form class="d-flex">
+            <%= navbar_button_name(current_user) %>
+            <%= navbar_button_sign_out %>
+            <%= navbar_button_sign_up %>
+            <%= navbar_button_log_in %>
+          </form>
+        </div>
     </div>
     <%= yield %>
 

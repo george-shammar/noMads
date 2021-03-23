@@ -3,11 +3,11 @@
     <div class = "panel">
     <%= render 'form', opinion: @opinion %>
         <div class = "experience">
-            <h4>Share your experience</h4>
+            <h4>Share your experience</h4><br><br>
 
             <% @opinions.each do | opinion | %>
-                <strong>George Gbenle</strong><br>
-                <small>ggr</small><br><br>
+                <strong><%= opinion.author.fullname%></strong><br>
+                <small><%= opinion.author.username%></small><br><br>
                 <p><%= opinion.text %></p><br><br>
                 <nav>
                     <div>
