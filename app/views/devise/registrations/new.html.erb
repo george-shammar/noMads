@@ -5,17 +5,17 @@
 
   <div class="field">
     <%= f.label :fullname %>
-    <%= f.text_field :fullname, autofocus: true, placeholder: "Full Name" %><br>
+    <%= f.text_field :fullname, required: true %><br>
   </div>
 
   <div class="field">
     <%= f.label :username %>
-    <%= f.text_field :username, autocomplete: "username" %><br>
+    <%= f.text_field :username, required: true, autocomplete: "username" %><br>
   </div>
 
   <div class="field">
     <%= f.label :email %>
-    <%= f.email_field :email, autocomplete: "email" %><br>
+    <%= f.email_field :email, required: true, autocomplete: "email" %><br>
   </div>
 
   <div class="field">
