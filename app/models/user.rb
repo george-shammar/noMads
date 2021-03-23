@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
 
-  has_many :opinions
+  has_many :opinions, class_name: 'Opinion', foreign_key: 'authorid'
 end
