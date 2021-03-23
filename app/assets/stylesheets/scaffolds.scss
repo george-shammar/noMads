@@ -63,3 +63,17 @@ div.actions {
 
 label {
   display: block; }
+
+.horizontal {
+  width: 88%;
+  position: relative;
+  left: 12%;
+}
+
+.vertical {
+  width: 12%;
+  position: absolute;
+  height: 100%;
+  background-color:rgb(21, 21, 24);
+  margin: 0%;
+}

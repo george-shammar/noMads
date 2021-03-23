@@ -13,12 +13,24 @@
   </head>
 
   <body>
+    <div class = "vertical">
+        <h5>My name</h5>
+          <nav class="nav flex-column">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </nav>
+      </div>
+
+    <div class = "horizontal">
       <nav class="navbar navbar-dark bg-primary">
         
         <%= link_to new_opinion_path do %>
           <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
         <% end %>
       </nav>
+    </div>
     <%= yield %>
 
 
