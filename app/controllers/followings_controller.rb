@@ -11,7 +11,7 @@ class FollowingsController < ApplicationController
             flash[:message] = "You are now following #{@followed_user}"
         else
             redirect_to root_path
-            flash[:alert] = "Your following attempt was unsuccessful"
+            flash[:alert] = "Following #{@followed_user} attempt was unsuccessful"
         end
     end
 
@@ -21,5 +21,11 @@ class FollowingsController < ApplicationController
     end
 
     def destroy
+        @following = Following.find(params[:id])
+        if @following.follower_user == current_user
+            @following.destroy
+            flash[message] = "You have unfollowed this user"
+        end
+        redirect_to root_path
     end
 end
