@@ -19,6 +19,9 @@
     <div class = "vertical">
       <nav class="nav flex-column">
         <%= navbar_button_name(current_user) %>
+        <%= follower_count(current_user) %>
+        <%= following_count(current_user) %>
+        
         <%= navbar_button_home %>
       </nav>
     </div>

@@ -23,4 +23,14 @@ module ApplicationHelper
       def user_signed_in?
         !current_user.nil?
       end
+
+      def follower_count(current_user)
+        @follower = Following.where(followedid: current_user)
+        @follower.count
+      end
+    
+      def following_count(current_user)
+        @following = Following.where(followerid: current_user)
+        @following.count
+      end
 end
