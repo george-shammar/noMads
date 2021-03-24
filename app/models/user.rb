@@ -5,5 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
 
-  has_many :opinions, class_name: 'Opinion', foreign_key: 'authorid'
+  has_many :opinions, class_name: 'Opinion', foreign_key: 'authorid', dependent: :destroy
+  has_many :follower_relationships, class_name: 'Following', foreign_key: 'followerid', dependent: :destroy
+  has_many :followed_relationships, class_name: 'FOllowing', foreign_key: 'followedid', dependent: :destroy
 end
