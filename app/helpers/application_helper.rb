@@ -1,11 +1,11 @@
 module ApplicationHelper
 
       def navbar_button_name(user)
-        link_to user.fullname, edit_user_registration_path  if user_signed_in?
+        link_to user.fullname, edit_user_registration_path, class: "nav-link active"  if user_signed_in?
       end
     
       def navbar_button_home
-        link_to 'noMads', root_path
+        link_to 'NOMADS', root_path, class: "nav-link active"
       end
     
       def navbar_button_sign_out
