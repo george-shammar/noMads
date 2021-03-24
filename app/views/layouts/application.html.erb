@@ -15,7 +15,7 @@
   
 
 
-  <body>
+  <body class = "container-fluid">
     <div class = "vertical">
       <nav class="nav flex-column">
         <%= navbar_button_name(current_user) %>
@@ -33,6 +33,7 @@
             <%= navbar_button_sign_out %>
             <%= navbar_button_sign_up %>
             <%= navbar_button_log_in %>
+            <%= navbar_button_edit(current_user) %>
           </form>
         </div>
     </div>

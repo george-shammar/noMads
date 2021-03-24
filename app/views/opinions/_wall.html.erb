@@ -35,7 +35,10 @@
 
                     <div class = "col">
                         <h4>Who to follow</h4>
-                        <%= User.find(current_user.id).fullname %>
+                         <% User.all.each do | user | %>
+                            <%= user.fullname %>
+                            
+                        <% end  %>
                         
                     
                 </div>
