@@ -11,12 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :text %>
+  <div class="field g-light border px-2 py-2">
+    <%= form.label :"Say something" %>
     <%= form.text_area :text %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary btn-sm" %>
   </div>
 <% end %>

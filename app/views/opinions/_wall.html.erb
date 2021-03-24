@@ -1,12 +1,17 @@
-<div class = "horizontal">
-    <%= link_to 'Opinions', root_path %>
+<div class = "horizontal ps-5">
+    <%= link_to 'Opinions', root_path, class: "text-decoration-none" %>
 
 
         <div>
-            <h4 class ="py-5" >Share your experience</h4>
+            <div class = "container">
+            <div class = "row">
+              <div class ="col-8">
                 <%= render 'form', opinion: @opinion %>
                     <div>
+                        <h4 class = "py-4">Recent Opinions</h4>
+                        <div>
                         <% @opinions.each do | opinion | %>
+                            <div class="g-light border px-2 py-2 my-1">
                             <%= opinion.author.fullname%>
                             <%= opinion.author.username%>
                             <p><%= opinion.text %></p>
@@ -21,11 +26,14 @@
                                         <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
                                     <% end %>
                                 </div>
+                                </div>
                         <% end %>
+                        </div>
                     </div>
+              </div>
 
 
-                    <div>
+                    <div class = "col">
                         <h4>Who to follow</h4>
                             <div class="column">
                                 <nav class="panel">
@@ -85,7 +93,8 @@
                                         </div>
                                 </nav>
                             </div>
-                    </div>
+                </div>
+            </div>    </div>
         </div>
 </div>
 
