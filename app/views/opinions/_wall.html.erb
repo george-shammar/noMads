@@ -12,20 +12,20 @@
                         <div>
                         <% @opinions.each do | opinion | %>
                             <div class="g-light border px-2 py-2 my-1">
-                            <%= opinion.author.fullname%>
-                            <%= opinion.author.username%>
-                            <p><%= opinion.text %></p>
-                                <div>
-                                    <%= link_to opinion do %>
-                                        <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
-                                    <% end %>
-                                    <%= link_to edit_opinion_path(opinion) do %>
-                                        <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-                                    <% end %>
-                                    <%= link_to opinion, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?"} do %>
-                                        <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                                    <% end %>
-                                </div>
+                                <%= opinion.author.fullname%>
+                                <%= opinion.author.username%>
+                                <p><%= opinion.text %></p>
+                                    <div>
+                                        <%= link_to opinion do %>
+                                            <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
+                                        <% end %>
+                                        <%= link_to edit_opinion_path(opinion) do %>
+                                            <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                                        <% end %>
+                                        <%= link_to opinion, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?"} do %>
+                                            <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                        <% end %>
+                                    </div>
                                 </div>
                         <% end %>
                         </div>

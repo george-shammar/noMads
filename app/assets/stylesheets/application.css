@@ -151,3 +151,25 @@ table {
   border-spacing: 0;
 }
 
+.horizontal {
+  width: 88%;
+  position: relative;
+  left: 12%;
+}
+
+.vertical {
+  width: 12%;
+  position: absolute;
+  height: 100%;
+  background-color:rgb(21, 21, 24);
+  margin: 0%;
+}
+
+.follow {
+  font-size: small;
+  padding-top: 2px;
+}
+
+.color-text{
+  color: white;
+}

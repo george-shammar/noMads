@@ -5,7 +5,11 @@ module ApplicationHelper
       end
     
       def navbar_button_home
-        link_to 'NOMADS', root_path, class: "nav-link active"
+        link_to 'HOME', root_path, class: "nav-link active"
+      end
+
+      def navbar_profile_button
+        link_to 'PROFILE', root_path, class: "nav-link active"
       end
     
       def navbar_button_sign_out
