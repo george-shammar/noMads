@@ -53,14 +53,21 @@
     </div>
 
     <nav>
+    
     <div class = "horizontal p-3 mb-2 bg-primary py-1 text-white">
-        <div>
-          <form class="d-flex nav justify-content-end">
-            <%= navbar_button_sign_out %>
-            <%= navbar_button_sign_up %>
-            <%= navbar_button_log_in %>
-            <%= navbar_button_edit(current_user) %>
-          </form>
+        <div class = "d-flex justify-content-between">
+          <div>
+            <%= navbar_button_nomads %>
+          </div>
+
+          <div>
+            <form class="d-flex nav justify-content-end">
+              <%= navbar_button_sign_out %>
+              <%= navbar_button_sign_up %>
+              <%= navbar_button_log_in %>
+              <%= navbar_button_edit(current_user) %>
+            </form>
+          </div>
         </div>
     </div>
     </nav>

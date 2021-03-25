@@ -13,6 +13,10 @@ module ApplicationHelper
         link_to 'HOME', root_path, class: "nav-link active"
       end
 
+      def navbar_button_nomads
+        link_to 'NOMADS', root_path, class: "nav-link active"
+      end
+
       def navbar_profile_button
         link_to 'PROFILE', root_path, class: "nav-link active"
       end
