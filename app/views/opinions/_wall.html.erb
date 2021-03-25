@@ -11,21 +11,27 @@
                         <h4 class = "py-4">Recent Opinions</h4>
                         <div>
                         <% @opinions.each do | opinion | %>
-                            <div class="g-light border px-2 py-2 my-1">
-                                <div class="fw-bold py-2"><%= opinion.author.fullname%></div>
-                                <p class = "pb-2"><%= opinion.text %></p>
-                                    <div>
-                                        <%= link_to opinion do %>
-                                            <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
-                                        <% end %>
-                                        <%= link_to edit_opinion_path(opinion) do %>
-                                            <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-                                        <% end %>
-                                        <%= link_to opinion, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?"} do %>
-                                            <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                                        <% end %>
-                                    </div>
+                            <div class="d-flex g-light border px-2 py-2 my-1">
+                                <div class = "py-2 pe-2">
+                                    <%= profile_photo(opinion.author) %>
                                 </div>
+
+                                <div>
+                                    <div class="fw-bold py-2"><%= opinion.author.username %></div>
+                                    <p class = "pb-2"><%= opinion.text %></p>
+                                        <div>
+                                            <%= link_to opinion do %>
+                                                <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
+                                            <% end %>
+                                            <%= link_to edit_opinion_path(opinion) do %>
+                                                <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                                            <% end %>
+                                            <%= link_to opinion, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?"} do %>
+                                                <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                            <% end %>
+                                        </div>
+                                </div>
+                            </div>
                         <% end %>
                         </div>
                     </div>

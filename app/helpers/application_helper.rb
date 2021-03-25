@@ -1,4 +1,9 @@
 module ApplicationHelper
+      def profile_photo(user)
+        if user_signed_in?
+          image_tag user.image.variant(resize: "50x50")  if user.image.attached?
+        end
+      end
 
       def navbar_button_name(user)
         link_to user.fullname, edit_user_registration_path, class: "nav-link active"  if user_signed_in?
