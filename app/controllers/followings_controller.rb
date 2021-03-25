@@ -1,5 +1,5 @@
 class FollowingsController < ApplicationController
-   
+#    method1
     def create
         user = User.find(params[:followedid])
         current_user.follow(user)

@@ -3,17 +3,27 @@
             <h1><%= @user.username %> Profile </h1>
         </div>
 
-        <% unless current_user == @user %>
         
-        <% unless current_user.following?(@user) %>
-            <% form_for (current_user.follower_relationships.build) do | f | %>
-                <%= hidden_field_tag :followedid, @user.id %>
-                <%= f.submit 'Follow', class: "btn btn-primary my-button" %>  
-            <% end %>
-        <% end %>
-            <%= link_to "Unfollow", following_path(@user), method: :delete, class: "btn btn-primary" if current_user.following?(@user) %> 
-            
-        <% end %>
+
+    <% if @user.id == current_user.id %>
+        <%= button_to "Logout", '/logout', method: :post %>
+    <% elsif current_user.followed_users.include?(@user) %>
+        <%= link_to "Unfollow", following_path(@user), method: :delete, class: "btn btn-primary" if current_user.following?(@user) %> 
+    <% else %>
+        <h5><%= button_to "Follow", follow_user_path, method: "POST"  %></h5>
+    <% end%>
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
         <div>
