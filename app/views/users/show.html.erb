@@ -6,7 +6,7 @@
         
 
     <% if @user.id == current_user.id %>
-        <%= button_to "Logout", '/logout', method: :post %>
+        <%= button_to "Sign_out", '/logout', method: :post %>
     <% elsif current_user.followed_users.include?(@user) %>
         <%= link_to "Unfollow", following_path(@user), method: :delete, class: "btn btn-primary" if current_user.following?(@user) %> 
     <% else %>

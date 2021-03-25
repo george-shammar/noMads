@@ -18,7 +18,7 @@ module ApplicationHelper
       end
 
       def navbar_profile_button
-        link_to 'PROFILE', root_path, class: "nav-link active"
+        link_to 'PROFILE', user_path(current_user), class: "nav-link active"
       end
     
       def navbar_button_sign_out
