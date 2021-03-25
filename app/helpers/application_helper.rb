@@ -33,12 +33,18 @@ module ApplicationHelper
       end
 
       def follower_count(current_user)
+        if user_signed_in?
         @follower = Following.where(followedid: current_user)
         @follower.count
+        
+        end
       end
     
       def following_count(current_user)
-        @following = Following.where(followerid: current_user)
-        @following.count
+        if user_signed_in?
+          @following = Following.where(followerid: current_user)
+          @following.count
+          
+        end
       end
 end
