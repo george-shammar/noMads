@@ -1,0 +1,18 @@
+    <div class = "horizontal">
+        <div>
+            <h1><%= @user.username %> Profile </h1>
+        </div>
+
+
+        <div>
+            <ul>
+            <% @user.opinions.each do | opinion | %>
+            <li>
+                <%= @user.username %>
+                <%= opinion.text %>
+                <%= opinion.created_at %>
+            </li>
+            <% end %>
+            </ul>
+        </div>
+    </div>
