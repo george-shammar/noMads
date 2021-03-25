@@ -161,8 +161,7 @@ table {
   width: 12%;
   position: absolute;
   height: 100%;
-  background-color:rgb(21, 21, 24);
-  margin: 0%;
+  background-color:rgb(49, 49, 66);
 }
 
 .follow {
@@ -172,4 +171,8 @@ table {
 
 .color-text{
   color: white;
+}
+
+.color-grey {
+  color: grey;
 }

@@ -12,9 +12,8 @@
                         <div>
                         <% @opinions.each do | opinion | %>
                             <div class="g-light border px-2 py-2 my-1">
-                                <%= opinion.author.fullname%>
-                                <%= opinion.author.username%>
-                                <p><%= opinion.text %></p>
+                                <div class="fw-bold py-2"><%= opinion.author.fullname%></div>
+                                <p class = "pb-2"><%= opinion.text %></p>
                                     <div>
                                         <%= link_to opinion do %>
                                             <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
