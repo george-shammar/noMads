@@ -39,7 +39,7 @@
                     <div class = "col">
                         <h4>Who to follow</h4>
                          <% User.all.each do | user | %>
-                            <% if !current_user.followed_users.include?(user) %>
+                            <% if !current_user.followed_users.include?(user) and current_user != user%>
                             <%= user.fullname %>
                             <h5><%= button_to "Follow", follow_user_path(user.id), method: "POST"  %></h5>
                             <% end %>
