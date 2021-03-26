@@ -5,6 +5,10 @@ module ApplicationHelper
         end
       end
 
+      def cover_photo(user)
+        image_tag user.coverimage.variant(resize: "900x300")  if user.coverimage.attached?
+      end
+
       def navbar_button_name(user)
         link_to user.fullname, edit_user_registration_path, class: "nav-link active"  if user_signed_in?
       end

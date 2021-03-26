@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_one_attached :image, dependent: :destroy
+  has_one_attached :coverimage, dependent: :destroy
 
   has_many :opinions, class_name: 'Opinion', foreign_key: 'authorid', dependent: :destroy
 
