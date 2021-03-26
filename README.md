@@ -25,7 +25,7 @@
 - Active storage
 
 ## Live Demo
-
+[Deployed app](https://sleepy-beyond-06136.herokuapp.com/)
 
 ## Getting Started
 
