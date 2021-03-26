@@ -47,12 +47,13 @@
 
                             
 
-                            <div>
+                            <div class = "absolute border">
                                 <div>
                                     <%= profile_show(@user) %>
                                 </div>
                                 <div class="fw-bold profile-name"><%= link_to "#{@user.username}", user_path(@user), class: "text-decoration-none" %></div>
                                 <%= link_to "@#{@user.username}", user_path(@user), class: "profile-username text-decoration-none" %>
+                                 
                                  <div class = "d-flex profile-follow">
                                     <div class= "text-center follow pe-2">
                                         <%= opinion_count(@user) %>
@@ -62,12 +63,15 @@
                                         <%= follower_count(@user) %>
                                         <h6 class="color-grey">Followers<h6>
                                     </div>
-                                    <div class= "text-center follow ps-2">
+                                    <div class= "text-center follow pe-5">
                                         <%= following_count(@user) %>
                                         <h6 class="color-grey">Following<h6>
                                     </div>
-                                    
                                  </div>
+                                 
+                                 <h3 class = "color-grey bold followed-by">FOLLOWED BY<H3>
+                                
+
                             </div>
 
 

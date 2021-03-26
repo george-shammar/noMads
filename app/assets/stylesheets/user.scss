@@ -1,24 +1,34 @@
 .cover {
-    position:absolute;
-    padding-left: 10%;
+    // position:absolute;
+    padding-left: 15%;
     padding-top: 3%;
 }
 
 .profile-name {
-    position: absolute;
-    padding-top: 8%;
-    padding-left: 10%;
+    // position: absolute;
+    padding-top: 10%;
+    padding-left: 15%;
 }
 
 .profile-username {
-    position: absolute;
-    padding-top: 10%;
-    padding-left: 10%;
+    // position: absolute;
+    padding-top: 11%;
+    padding-left: 15%;
 }
 
 .profile-follow {
-    position: absolute;
+    position: relative;
     padding-top: 15%;
-    padding-left: 5%;
+    // margin-right: 15%;
+}
+
+.absolute {
+    position: absolute;
+    padding-left: 79%;
+}
+
+.followed-by {
+    padding-top: 20%;
+    padding-left:5%;
 }
 

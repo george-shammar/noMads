@@ -12,6 +12,8 @@ module UsersHelper
         @opinion.count
         
         end
-      end
+    end
+
+    
 
 end
