@@ -6,7 +6,7 @@ module ApplicationHelper
       end
 
       def cover_photo(user)
-        image_tag user.coverimage.variant(resize: "900x300")  if user.coverimage.attached?
+        image_tag user.coverimage.variant(resize_to_fill: [850, 250, gravity: 'north']) if user.coverimage.attached?
       end
 
       def navbar_button_name(user)

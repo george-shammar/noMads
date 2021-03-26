@@ -1,49 +1,80 @@
     <div class = "horizontal">
-        <div>
-            <%= cover_photo(@user) %>
-        </div>
-        
-            <%= render 'form', opinion: @opinion %>
-
-            <% if @user.id == current_user.id %>
-                <%= button_to "Sign_out", '/logout', method: :post %>
-            <% elsif current_user.followed_users.include?(@user) %>
-                <%= link_to "Unfollow", following_path(@user), method: :delete, class: "btn btn-primary" if current_user.following?(@user) %> 
-            <% else %>
-                <h5><%= button_to "Follow", follow_user_path, method: "POST", class: "btn btn-primary"  %></h5>
-            <% end%>
-            
-
-        <div>
-            <ul>
-            <% @user.opinions.each do | opinion | %>
-            <li>
-                <%= @user.username %>
-                <%= opinion.text %>
-                <%= opinion.created_at %>
-                <div class="d-flex g-light border px-2 py-2 my-1">
-                                <div class = "py-2 pe-2">
-                                    <%= profile_photo(opinion.author) %>
+        <div class = "d-flex">
+                            <div> 
+                                <div>
+                                    <%= cover_photo(@user) %>
                                 </div>
+
+                                    <% if @user.id == current_user.id %>
+                                        <%= button_to "Sign_out", '/logout', method: :post %>
+                                    <% elsif current_user.followed_users.include?(@user) %>
+                                        <%= link_to "Unfollow", following_path(@user), method: :delete, class: "btn btn-primary" if current_user.following?(@user) %> 
+                                    <% else %>
+                                        <h5><%= button_to "Follow", follow_user_path, method: "POST", class: "btn btn-primary"  %></h5>
+                                    <% end%>
+                                    
 
                                 <div>
-                                    <div class="fw-bold py-2"><%= link_to "#{opinion.author.username}", user_path(opinion.author), class: "text-decoration-none" %></div>
-                                    <p class = "pb-2"><%= opinion.text %></p>
-                                        <div>
-                                            <%= link_to opinion do %>
-                                                <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
-                                            <% end %>
-                                            <%= link_to edit_opinion_path(opinion) do %>
-                                                <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-                                            <% end %>
-                                            <%= link_to opinion, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?"} do %>
-                                                <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                                            <% end %>
-                                        </div>
+                                    <ul>
+                                    <% @user.opinions.each do | opinion | %>
+                                    <li>
+                                        <div class="d-flex g-light border px-2 py-2 my-1">
+                                                        <div class = "py-2 pe-2">
+                                                            <%= profile_photo(opinion.author) %>
+                                                        </div>
+
+                                                        <div>
+                                                            <div class="fw-bold py-2"><%= link_to "#{opinion.author.username}", user_path(opinion.author), class: "text-decoration-none" %></div>
+                                                            <p class = "pb-2"><%= opinion.text %></p>
+                                                                <div>
+                                                                    <%= link_to opinion do %>
+                                                                        <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
+                                                                    <% end %>
+                                                                    <%= link_to edit_opinion_path(opinion) do %>
+                                                                        <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                                                                    <% end %>
+                                                                    <%= link_to opinion, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?"} do %>
+                                                                        <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                                                    <% end %>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                    </li>
+                                    <% end %>
+                                    </ul>
                                 </div>
                             </div>
-            </li>
-            <% end %>
-            </ul>
-        </div>
+
+                            
+
+                            <div>
+                                <div>
+                                    <%= profile_show(@user) %>
+                                </div>
+                                <div class="fw-bold profile-name"><%= link_to "#{@user.username}", user_path(@user), class: "text-decoration-none" %></div>
+                                <%= link_to "@#{@user.username}", user_path(@user), class: "profile-username text-decoration-none" %>
+                                 <div class = "d-flex profile-follow">
+                                    <div class= "text-center follow pe-2">
+                                        <%= opinion_count(@user) %>
+                                        <h6 class="color-grey">Opinions<h6>
+                                    </div>
+                                    <div class= "text-center follow pe-2">
+                                        <%= follower_count(@user) %>
+                                        <h6 class="color-grey">Followers<h6>
+                                    </div>
+                                    <div class= "text-center follow ps-2">
+                                        <%= following_count(@user) %>
+                                        <h6 class="color-grey">Following<h6>
+                                    </div>
+                                    
+                                 </div>
+                            </div>
+
+
+
+
+
+
+
+            </div>
     </div>
