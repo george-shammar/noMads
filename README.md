@@ -42,7 +42,7 @@ To get a local copy up and running follow these simple example steps.
 ```
 git clone URL/SSH key
 ```
-- If you don't have git you can download this project and unzip it.
+- If you don't have git, you can download this project and unzip it.
 - Change directory into the folder the application is saved.
 - To install the gems, run:
 ```
@@ -65,7 +65,7 @@ Open `http://localhost:3000/` in your browser.
 
 - Sign up with your full name, username and password.
 
-- You can edit your profile by uploading a profile photo that shows up oin your home page. 
+- You can edit your profile by uploading a profile photo that shows up on your home page. 
 
 - You can also edit your profile to upload a cover picture that is displayed on your personal page.
 
@@ -87,9 +87,9 @@ Open `http://localhost:3000/` in your browser.
 
 ### Deployment
 
-- Deployed in Heroku
+- Deployed on Heroku
 
-## Authors
+## Author
 
 
 👤 **George Gbenle**
