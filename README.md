@@ -7,7 +7,8 @@
 
 > The application represents an MVP of the product with the full graphical design but only basic features that would be extended in the future.
 
-![screenshot]
+![screenshot](./homepage.png)
+![screenshot](./profiepage.png)
 
 ## Built With
 
@@ -24,6 +25,7 @@
 - Active storage
 
 ## Live Demo
+
 
 ## Getting Started
 
