@@ -20,4 +20,10 @@ def create
     end
   end
 
+  private
+
+    def like_params
+        params.require(:like).permit(:opinion_id, :user_id)
+    end
+
 end
