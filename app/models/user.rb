@@ -14,17 +14,12 @@ class User < ApplicationRecord
   has_many :followed_users, through: :follower_relationships, source: :followed_user
 
 
-# method2
-  
-  # def follow(user)
-  #   followed_users << user if !self.following?(user) and !self.following?(user)
-  # end
 
-  # method1
+  
   def unfollow(user)
     followed_users.delete(user)
   end
-# method1
+
   def following?(user)
     followed_users.include?(user)
   end
