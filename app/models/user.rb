@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :username, presence: true, length: { maximum: 20 }
-  
+
   has_one_attached :image, dependent: :destroy
   has_one_attached :coverimage, dependent: :destroy
 
@@ -18,7 +18,6 @@ class User < ApplicationRecord
   has_many :follower_users, through: :followed_relationships, source: :follower_user
   has_many :followed_users, through: :follower_relationships, source: :followed_user
 
-  
   def unfollow(user)
     followed_users.delete(user)
   end
@@ -26,5 +25,4 @@ class User < ApplicationRecord
   def following?(user)
     followed_users.include?(user)
   end
-
 end

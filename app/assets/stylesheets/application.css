@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -161,7 +162,7 @@ table {
   width: 12%;
   position: absolute;
   height: 100%;
-  background-color:rgb(49, 49, 66);
+  background-color: rgb(49, 49, 66);
 }
 
 .follow {
@@ -169,7 +170,7 @@ table {
   padding-top: 2px;
 }
 
-.color-text{
+.color-text {
   color: white;
 }
 

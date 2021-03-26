@@ -1,6 +1,5 @@
 class LikesController < ApplicationController
-
-def create
+  def create
     @like = current_user.likes.new(opinion_id: params[:opinion_id])
 
     if @like.save
@@ -22,8 +21,7 @@ def create
 
   private
 
-    def like_params
-        params.require(:like).permit(:opinion_id, :user_id)
-    end
-
+  def like_params
+    params.require(:like).permit(:opinion_id, :user_id)
+  end
 end
