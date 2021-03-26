@@ -1,29 +1,25 @@
 <div class = "horizontal ps-3 py-2">
-    
-        <div class = "pt-3">
-            <div class = "container">
+    <div class = "pt-3">
+        <div class = "container">
             <div class = "row">
               <div class ="col-8">
                 <%= render 'form', opinion: @opinion %>
                     <div>
                         <h4 class = "py-4">Recent Opinions</h4>
-                        <div>
-                        <% @opinions.each do | opinion | %>
-                            <div class="d-flex g-light border px-2 py-2 my-1">
+                            <div>
+                                <% @opinions.each do | opinion | %>
+                                <div class="d-flex g-light border px-2 py-2 my-1">
                                 <div class = "py-2 pe-2">
                                     <%= profile_photo(opinion.author) %>
                                 </div>
-
                                 <div>
                                     <div class="fw-bold py-2"><%= link_to "#{opinion.author.username}", user_path(opinion.author), class: "text-decoration-none" %></div>
-                                    <p class = "pb-2"><%= opinion.text %></p>
-
+                                        <p class = "pb-2"><%= opinion.text %></p>
                                         <div class='post-liking'>
                                             <span class='post-date'> <%= opinion.created_at.strftime("%Y/%m/%d") %> </span>
                                             <%= like_or_dislike_btn(opinion) %>
                                             <span class = "like_count"><%= like_count(opinion) %></span>
                                         </div>
-
                                         <div>
                                             <% if current_user == opinion.author %>
                                                 <%= link_to edit_opinion_path(opinion) do %>

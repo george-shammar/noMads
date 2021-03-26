@@ -11,20 +11,5 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe OpinionsHelper, type: :helper do
-  # describe 'index page' do
-  #   it 'shows like_or_dislike_btn' do
-  #     visit new_user_registration_path
-  #     click_on 'Sign up'
-  #     fill_in 'Fullname', with: 'George'
-  #     fill_in 'Username', with: 'Georgia'
-  #     fill_in 'Email', with: 'george@gmail.com'
-  #     fill_in 'Password', with: 'password'
-  #     fill_in 'Password confirmation', with: 'password'
-  #     click_on 'Sign up'
-  #     visit root_path
-  #     fill_in 'Say something', with: 'My Post'
-  #     click_on 'Create Opinion'
-  #     expect(page).to have_content('Likes!')
-  #   end
-  # end
+  
 end

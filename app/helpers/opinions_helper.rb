@@ -12,4 +12,6 @@ module OpinionsHelper
       if current_user == opinion.author 
       end
     end
+
+    
 end
