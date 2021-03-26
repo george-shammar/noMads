@@ -59,7 +59,8 @@ module ApplicationHelper
         if user_signed_in?
           @following = Following.where(followerid: current_user)
           @following.count
-          
         end
       end
+
+      
 end
