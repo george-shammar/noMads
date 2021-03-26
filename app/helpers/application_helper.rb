@@ -18,7 +18,7 @@ module ApplicationHelper
       end
 
       def navbar_button_nomads
-        link_to 'NOMADS', root_path, class: "nav-link active"
+        link_to 'NOMADS', root_path, class: "nav-link active home"
       end
 
       def navbar_profile_button

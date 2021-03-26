@@ -5,4 +5,23 @@
 
 .icon {
     padding: 5px;
+    height: 1%;
 }
+
+.post-liking {
+    float: right;
+
+    a {
+      font-weight: bold;
+      font-size: 0.6em;
+      margin: 0 4px;
+    }
+
+    .post-date {
+      font-size: 0.6em;
+    }
+  }
+
+  .like_count {
+    font-size: 0.6rem;
+  }

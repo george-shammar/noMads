@@ -176,3 +176,8 @@ table {
 .color-grey {
   color: grey;
 }
+
+.home {
+  color: white;
+  font-weight: bold;
+}
