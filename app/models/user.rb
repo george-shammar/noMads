@@ -18,8 +18,6 @@ class User < ApplicationRecord
   has_many :follower_users, through: :followed_relationships, source: :follower_user
   has_many :followed_users, through: :follower_relationships, source: :followed_user
 
-
-
   
   def unfollow(user)
     followed_users.delete(user)
@@ -28,6 +26,5 @@ class User < ApplicationRecord
   def following?(user)
     followed_users.include?(user)
   end
-
 
 end
