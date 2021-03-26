@@ -6,5 +6,10 @@ module OpinionsHelper
         else
           link_to('Likes!', opinion_likes_path(opinion_id: opinion.id), method: :post, class: "text-decoration-none color-grey")
         end
+    end
+
+    def icon
+      if current_user == opinion.author 
       end
+    end
 end

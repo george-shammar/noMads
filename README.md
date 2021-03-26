@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# NOMADS
 
-Things you may want to cover:
+## Project Description
+> NOMAD is a social media web application intended as a destination for digital nomads to share their opinion and travel experiences.
 
-* Ruby version
+> The application represents an MVP of the product with the full graphical design but only basic features that would be extended in the future.
 
-* System dependencies
+## Built With
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- ruby '3.0.0'
+- Ruby on Rails v6.1.3'

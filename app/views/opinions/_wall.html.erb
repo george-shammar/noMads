@@ -25,12 +25,13 @@
                                         </div>
 
                                         <div>
-                                            
-                                            <%= link_to edit_opinion_path(opinion) do %>
-                                                <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-                                            <% end %>
-                                            <%= link_to opinion, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?"} do %>
-                                                <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                            <% if current_user == opinion.author %>
+                                                <%= link_to edit_opinion_path(opinion) do %>
+                                                    <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                                                <% end %>
+                                                <%= link_to opinion, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?"} do %>
+                                                    <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                                <% end %>
                                             <% end %>
                                         </div>
                                 </div>
@@ -41,7 +42,7 @@
               </div>
 
 
-                    <div class = "col">
+                    <div class = "col whotofollow">
                         <h3 class = "bold color-grey">Who to follow</h3>
                          <% User.all.each do | user | %>
                             <% if !current_user.followed_users.include?(user) and current_user != user%>
