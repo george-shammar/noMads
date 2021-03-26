@@ -9,13 +9,13 @@ module OpinionsHelper
     end
 
     def edit_icon
-      if current_user == @opinion.author 
+      unless current_user != @opinion.author 
         link_to fa_icon('pencil', type: :fa), edit_opinion_path(opinion)
       end
     end
 
     def trash_icon
-      if current_user == @opinion.author
+      unless current_user != @opinion.author
         link_to fa_icon('trash-o', type: :fa), edit_opinion_path(opinion)
       end
     end

@@ -14,16 +14,16 @@ module ApplicationHelper
       end
     
       def navbar_button_home
-        link_to 'HOME', root_path, class: "nav-link active"
+        link_to 'HOME', root_path, class: "nav-link active pt-5 color-text"
       end
 
       def navbar_button_nomads
-        link_to 'NOMADS', root_path, class: "nav-link active home"
+        link_to 'NOMADS', root_path, class: "nav-link active home color-text"
       end
 
       def navbar_profile_button
         if user_signed_in?
-          link_to 'PROFILE', user_path(current_user), class: "nav-link active"
+          link_to 'PROFILE', user_path(current_user), class: "nav-link active pt-4 light"
         end
       end
     

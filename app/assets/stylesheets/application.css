@@ -181,3 +181,11 @@ table {
   color: white;
   font-weight: bold;
 }
+
+.house {
+  padding-top: 27%;
+}
+
+.person {
+  padding-top: 12%;
+}
