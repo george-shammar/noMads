@@ -6,6 +6,7 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.2.1",
+    "fsevents": "^1.2.9",
     "standard": "^16.0.3",
     "turbolinks": "^5.2.0"
   },
