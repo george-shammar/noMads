@@ -7,7 +7,7 @@ RSpec.describe ApplicationHelper, type: :system do
           expect(page).to have_content('HOME')
         end
 
-        it 'shows home button' do
+        it 'shows NOMADS button' do
             visit root_path
             expect(page).to have_content('NOMADS')
         end
@@ -23,7 +23,7 @@ RSpec.describe ApplicationHelper, type: :system do
             expect(page).to have_content('Sign in')
         end
 
-        it 'shows Sign out button' do
+        it 'shows Edit profile button' do
             @user = User.first_or_create!(fullname: 'Foo', username:'Foobar', email: 'foo@bar.com', password: '123456789', password_confirmation: '123456789')
             visit new_user_session_path
             fill_in 'Username', with: @user.username
@@ -42,5 +42,16 @@ RSpec.describe ApplicationHelper, type: :system do
             click_on 'Log in'
             expect(page).to have_content('Edit profile')
         end
+
+        it 'counts followers' do
+            @user = User.first_or_create!(fullname: 'Foo', username:'Foobar', email: 'foo@bar.com', password: '123456789', password_confirmation: '123456789')
+            visit new_user_session_path
+            fill_in 'Username', with: @user.username
+            fill_in 'Email', with: @user.email
+            fill_in 'Password', with: @user.password
+            click_on 'Log in'
+            expect(page).to have_content('Followers')
+        end
+
     end
 end
