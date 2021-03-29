@@ -43,7 +43,7 @@ RSpec.describe ApplicationHelper, type: :system do
             expect(page).to have_content('Edit profile')
         end
 
-        it 'counts followers' do
+        it 'counts followers and followed' do
             @user = User.first_or_create!(fullname: 'Foo', username:'Foobar', email: 'foo@bar.com', password: '123456789', password_confirmation: '123456789')
             visit new_user_session_path
             fill_in 'Username', with: @user.username

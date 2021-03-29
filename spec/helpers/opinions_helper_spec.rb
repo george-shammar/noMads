@@ -10,5 +10,6 @@ require 'rails_helper'
 #     end
 #   end
 # end
-RSpec.describe OpinionsHelper, type: :helper do
+RSpec.describe OpinionsHelper, type: :system do
+    
 end
