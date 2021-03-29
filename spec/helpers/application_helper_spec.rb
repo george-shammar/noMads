@@ -16,5 +16,15 @@ RSpec.describe ApplicationHelper, type: :system do
             visit root_path
             expect(page).to have_content('Sign in')
         end
+
+        it 'shows Log out button' do
+            @user = User.first_or_create!(fullname: 'Foo', username:'Foobar', email: 'foo@bar.com', password: '123456789', password_confirmation: '123456789')
+            visit new_user_session_path
+            fill_in 'Username', with: @user.username
+            fill_in 'Email', with: @user.email
+            fill_in 'Password', with: @user.password
+            click_on 'Log in'
+            expect(page).to have_content('Sign out')
+        end
     end
 end
