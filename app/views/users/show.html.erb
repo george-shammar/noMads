@@ -4,8 +4,13 @@
                 <div>
                     <%= cover_photo(@user) %>
                 </div>
-                    <%= follow_unfollow_button %>
-                <div>
+                <div class = "py-3 ps-3">
+                    <strong><%= opinion_tab %></strong>
+                </div>
+                <div class = "px-3 border pt-4">
+                    <div>
+                        <h3 class = "text-primary fw-bold">All Opnions</h3>
+                    </div><hr>
                     <ul>
                         <% @user.opinions.each do | opinion | %>
                             <li>
@@ -40,7 +45,7 @@
                 </div>
                 <div class="fw-bold profile-name"><%= link_to "#{@user.username}", user_path(@user), class: "text-decoration-none" %></div>
                     <%= link_to "@#{@user.username}", user_path(@user), class: "profile-username text-decoration-none" %>
-                <div class = "d-flex profile-follow">
+                <div class = "d-flex profile-follow pb-3">
                     <div class= "text-center follow pe-2">
                         <%= opinion_count(@user) %>
                         <h6 class="color-grey">Opinions<h6>
@@ -54,6 +59,7 @@
                         <h6 class="color-grey">Following<h6>
                     </div>
                 </div>
+                <%= follow_unfollow_button %>
             </div>
         </div>
     </div>

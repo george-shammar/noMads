@@ -11,6 +11,10 @@ module UsersHelper
     end
   end
 
+  def opinion_tab
+    link_to "Opinions", new_opinion_path, class: "text-decoration-none color-grey"
+  end
+
   def follow_unfollow_button
     if @user.id == current_user.id
       link_to 'Sign_out', '/logout', method: :post
