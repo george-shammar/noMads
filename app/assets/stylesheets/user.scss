@@ -1,17 +1,14 @@
 .cover {
-  // position:absolute;
   padding-left: 15%;
   padding-top: 3%;
 }
 
 .profile-name {
-  // position: absolute;
   padding-top: 10%;
   padding-left: 15%;
 }
 
 .profile-username {
-  // position: absolute;
   padding-top: 11%;
   padding-left: 15%;
 }
@@ -19,7 +16,6 @@
 .profile-follow {
   position: relative;
   padding-top: 15%;
-  // margin-right: 15%;
 }
 
 .absolute {
@@ -35,4 +31,8 @@
 .side {
   width: 80%;
   right: 10%;
+}
+
+.medium-font {
+  font-size: 0.9rem;
 }
