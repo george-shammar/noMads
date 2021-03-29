@@ -32,22 +32,14 @@
                     </div>
                     <div class = "col whotofollow">
                         <h3 class = "bold color-grey">Who to follow</h3>
-                         <% User.all.each do | user | %>
-                            <% if !current_user.followed_users.include?(user) and current_user != user%>
-                            <div class ="d-flex py-2 justify-content-between side justify-content-center">
-                                <div class = "py-2 pe-2">
-                                    <%= profile_photo(user) %>
-                                </div>
-                                <div class = "px-2 pt-3">
-                                    <%= user.fullname %>
-                                </div>
-                                <div class ="pt-2">
-                                    <%= button_to "Follow", follow_user_path(user.id), method: "POST", class: "btn btn-primary btn-sm align-self-end"  %>
-                                </div>
-                            </div>
-                            <% end %>
+                        <% User.all.each do | user | %>
+                         <div class = "d-flex py-2 justify-content-between side justify-content-center">
+                            <%= who_to_follow_photo(user) %>
+                            <%= who_to_follow_fullname(user) %>
+                            <%= who_to_follow_button(user) %>
+                         </div>
                             
-                        <% end  %>
+                        <% end %>
                         
                     
                 </div>

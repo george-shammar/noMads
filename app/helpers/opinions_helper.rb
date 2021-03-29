@@ -17,4 +17,23 @@ module OpinionsHelper
   def trash_icon
     link_to fa_icon('trash-o', type: :fa), edit_opinion_path(opinion) unless current_user != @opinion.author
   end
+
+  def who_to_follow_fullname(user)
+    if !current_user.followed_users.include?(user) and current_user != user
+      user.fullname
+    end
+  end
+
+  def who_to_follow_photo(user)
+    if !current_user.followed_users.include?(user) and current_user != user
+      profile_photo(user)
+    end
+end
+
+def who_to_follow_button(user)
+  if !current_user.followed_users.include?(user) and current_user != user
+    button_to "Follow", follow_user_path(user.id), method: "POST", class: "btn btn-primary btn-sm align-self-end"
+  end
+end
+
 end
