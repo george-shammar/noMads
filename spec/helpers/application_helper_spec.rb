@@ -11,5 +11,10 @@ RSpec.describe ApplicationHelper, type: :system do
             visit root_path
             expect(page).to have_content('Sign up')
         end
+
+        it 'shows sign in button' do
+            visit root_path
+            expect(page).to have_content('Sign in')
+        end
     end
 end
