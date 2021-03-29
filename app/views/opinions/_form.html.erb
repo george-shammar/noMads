@@ -11,9 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field g-light border px-2 py-2 ">
+  <div class="field g-light border pt-3 pb-3 ps-3 ">
     <%= form.label :"Say something" %>
-    <%= form.text_area :text %>
+    <%= form.text_area :text, placeholder: "Compose a new opinion", class: "text-area" %>
   </div>
 
   <div class="actions">
