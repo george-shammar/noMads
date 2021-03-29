@@ -7,7 +7,7 @@
                     <div>
                         <h4 class = "py-4">Recent Opinions</h4>
                             <div>
-                                <% @opinions.each do | opinion | %>
+                                <% @opinions.includes(:author).each do | opinion | %>
                                 <div class="d-flex g-light border px-2 py-2 my-1">
                                 <div class = "py-2 pe-2">
                                     <%= profile_photo(opinion.author) %>
@@ -32,7 +32,7 @@
                     </div>
                     <div class = "col whotofollow">
                         <h3 class = "bold color-grey pb-2">Who to follow</h3>
-                        <% User.all.each do | user | %>
+                        <% User.all.includes(:image_attachment).each do | user | %>
                          <div class = "d-flex pt-2 justify-content-between side justify-content-center">
                             <%= who_to_follow_photo(user) %>
                             <%= who_to_follow_fullname(user) %>
