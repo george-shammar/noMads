@@ -7,6 +7,12 @@ RSpec.describe ApplicationHelper, type: :system do
           expect(page).to have_content('HOME')
         end
 
+        it 'shows home button' do
+            visit root_path
+            expect(page).to have_content('NOMADS')
+        end
+
+
         it 'shows sign up button' do
             visit root_path
             expect(page).to have_content('Sign up')
