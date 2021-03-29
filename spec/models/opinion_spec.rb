@@ -9,7 +9,7 @@ RSpec.describe Opinion, type: :model do
   end
 
   it { should validate_presence_of(:text) }
-  
+
   it { should belong_to(:author) }
   it { should have_many(:likes) }
 end

@@ -12,7 +12,7 @@ module UsersHelper
   end
 
   def opinion_tab
-    link_to "Opinions", new_opinion_path, class: "text-decoration-none color-grey"
+    link_to 'Opinions', new_opinion_path, class: 'text-decoration-none color-grey'
   end
 
   def follow_unfollow_button
