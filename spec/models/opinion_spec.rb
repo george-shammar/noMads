@@ -7,4 +7,6 @@ RSpec.describe Opinion, type: :model do
     @like = Like.create(opinion_id: @opinion.id, user_id: @user.id)
     expect(like_count(@opinion).is_a?(Integer)).to be true
   end
+
+  it { should validate_presence_of(:text) }
 end
