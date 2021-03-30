@@ -12,14 +12,12 @@ module OpinionsHelper
   end
 
   def edit_icon(opinion)
-    unless current_user != @user 
-      link_to "edit", edit_opinion_path(opinion), class: "text-decoration-none"
-    end
+    link_to 'edit', edit_opinion_path(opinion), class: 'text-decoration-none' unless current_user != @user
   end
 
   def trash_icon(opinion)
-    unless current_user != @user 
-      link_to 'delete', opinion, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?"}
+    unless current_user != @user
+      link_to 'delete', opinion, method: :delete, data: { confirm: 'Are you sure you want to delete this tweet?' }
     end
   end
 
