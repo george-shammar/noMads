@@ -11,12 +11,16 @@ module OpinionsHelper
     end
   end
 
-  def edit_icon
-    link_to fa_icon('pencil', type: :fa), edit_opinion_path(opinion) unless current_user != @opinion.author
+  def edit_icon(opinion)
+    unless current_user != @user 
+      link_to "edit", edit_opinion_path(opinion), class: "text-decoration-none"
+    end
   end
 
-  def trash_icon
-    link_to fa_icon('trash-o', type: :fa), edit_opinion_path(opinion) unless current_user != @opinion.author
+  def trash_icon(opinion)
+    unless current_user != @user 
+      link_to 'delete', opinion, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?"}
+    end
   end
 
   def who_to_follow_fullname(user)
