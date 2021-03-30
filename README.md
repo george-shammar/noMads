@@ -51,7 +51,9 @@ git clone URL/SSH key
 bundle install
 ```
 - Install yarn (you need to have npm installed) by running:
-```npm install --global yarn
+
+```
+npm install --global yarn
 ```
 
 Setup database with:
