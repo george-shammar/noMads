@@ -1,0 +1,58 @@
+    <div class = "horizontal">
+        <div class = "d-flex">
+            <div> 
+                <div>
+                    <%= cover_photo(@user) %>
+                </div>
+                <div class = "py-3 ps-3">
+                    <strong><%= opinion_tab %></strong>
+                </div>
+                <div class = "px-3 border pt-4">
+                    <div>
+                        <h3 class = "text-primary fw-bold">All Opnions</h3>
+                    </div><hr>
+                    <ul>
+                        <% @user.opinions.each do | opinion | %>
+                            <li>
+                                <div class="d-flex g-light border px-2 py-2 my-1">
+                                    <div class = "py-2 pe-2">
+                                        <%= profile_photo(opinion.author) %>
+                                    </div>
+                                    <div>
+                                        <div class="fw-bold py-2"><%= link_to "#{opinion.author.username}", user_path(opinion.author), class: "text-decoration-none medium-font" %></div>
+                                            <p class = "pb-2 small-font"><%= opinion.text %></p>
+                                                <div>
+                                                    <%= edit_icon(opinion) %>
+                                                    <%= trash_icon(opinion) %>
+                                                </div>
+                                        </div>
+                                    </div>
+                            </li>
+                        <% end %>
+                    </ul>
+                </div>
+            </div>
+            <div class = "absolute">
+                <div>
+                    <%= profile_show(@user) %>
+                </div>
+                <div class="fw-bold profile-name"><%= link_to "#{@user.username}", user_path(@user), class: "text-decoration-none" %></div>
+                    <%= link_to "@#{@user.username}", user_path(@user), class: "profile-username text-decoration-none" %>
+                <div class = "d-flex profile-follow pb-3">
+                    <div class= "text-center follow pe-2">
+                        <%= opinion_count(@user) %>
+                        <h6 class="color-grey">Opinions<h6>
+                    </div>
+                    <div class= "text-center follow pe-2">
+                        <%= follower_count(@user) %>
+                        <h6 class="color-grey">Followers<h6>
+                    </div>
+                    <div class= "text-center follow pe-5">
+                        <%= following_count(@user) %>
+                        <h6 class="color-grey">Following<h6>
+                    </div>
+                </div>
+                <%= follow_unfollow_button %>
+            </div>
+        </div>
+    </div>
