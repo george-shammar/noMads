@@ -1,3 +1,16 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :users, :controllers => { registrations: 'registrations' }
+
+  resources :opinions do
+    resources :likes, only: [:create, :destroy]
+  end
+
+  resources :followings, only: [:create, :show, :destroy]
+  
+  resources :users, only: [:index, :show]
+
+  post '/users/:id/follow', to: "users#follow", as: "follow_user"
+  
+
+  root 'opinions#index'
 end

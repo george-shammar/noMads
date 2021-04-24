@@ -1,0 +1,12 @@
+<%= form_with(model: opinion) do |form| %>
+  
+
+  <div class="field g-light border pt-3 pb-3 ps-3 ">
+    <%= form.label :"Say something" %>
+    <%= form.text_area :text, placeholder: "Compose a new opinion", class: "text-area" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary btn-sm" %>
+  </div>
+<% end %>

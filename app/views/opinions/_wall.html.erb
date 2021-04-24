@@ -1,0 +1,54 @@
+<div class = "horizontal ps-3 py-2">
+    <div class = "pt-3">
+        <div class = "container">
+            <div class = "row">
+              <div class ="col-8">
+                <%= render 'form', opinion: @opinion %>
+                    <div>
+                        <h4 class = "py-4">Recent Opinions</h4>
+                            <div>
+                                <% @opinions.includes(:author).each do | opinion | %>
+                                <div class="d-flex g-light border px-2 py-2 my-1">
+                                <div class = "py-2 pe-2">
+                                    <%= profile_photo(opinion.author) %>
+                                </div>
+                                <div>
+                                    <div class="fw-bold py-2"><%= link_to "#{opinion.author.username}", user_path(opinion.author), class: "text-decoration-none medium-font" %></div>
+                                        <p class = "pb-2 small-font"><%= opinion.text %></p>
+                                        <div class='post-liking'>
+                                            <span class='post-date'> <%= opinion.created_at.strftime("%Y/%m/%d") %> </span>
+                                            <%= like_or_dislike_btn(opinion) %>
+                                            <span class = "like_count"><%= like_count(opinion) %></span>
+                                        </div>
+                                    </div>
+                                 </div>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col whotofollow">
+                        <h3 class = "bold color-grey pb-2">Who to follow</h3>
+                        <% User.all.includes(:image_attachment).each do | user | %>
+                         <div class = "d-flex pt-2 justify-content-between side justify-content-center">
+                            <%= who_to_follow_photo(user) %>
+                            <%= who_to_follow_fullname(user) %>
+                            <%= who_to_follow_button(user) %>
+                         </div>
+                            
+                        <% end %>
+                        
+                    
+                </div>
+            </div>    </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
