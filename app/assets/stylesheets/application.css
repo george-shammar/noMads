@@ -161,7 +161,7 @@ table {
 .vertical {
   width: 12%;
   position: absolute;
-  height: 100%;
+  height: 5000px;
   background-color: rgb(49, 49, 66);
 }
 

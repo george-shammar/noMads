@@ -17,7 +17,8 @@ module UsersHelper
 
   def follow_unfollow_button
     if @user.id == current_user.id
-      link_to 'Sign_out', '/logout', method: :post
+      link_to 'Sign out', destroy_user_session_path, method: :delete,
+                                                     class: 'btn btn-primary mx-1 btn-sm'
     elsif current_user.followed_users.include?(@user)
       if current_user.following?(@user)
         link_to 'Unfollow', following_path(@user), method: :delete,
