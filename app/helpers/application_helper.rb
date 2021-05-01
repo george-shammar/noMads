@@ -13,7 +13,7 @@ module ApplicationHelper
   end
 
   def navbar_button_home
-    link_to 'HOME', root_path, class: 'nav-link active pt-5 color-text'
+    link_to 'HOME', root_path, class: 'nav-link active pt-5 color-text' if user_signed_in?
   end
 
   def navbar_button_nomads
@@ -51,7 +51,7 @@ module ApplicationHelper
     if user_signed_in?
       @follower = Following.where(followedid: current_user)
       @follower.count
-
+      
     end
   end
 
@@ -59,6 +59,7 @@ module ApplicationHelper
     if user_signed_in?
       @following = Following.where(followerid: current_user)
       @following.count
+      
     end
   end
 end
