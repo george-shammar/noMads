@@ -31,13 +31,17 @@
               <div class = "color-text">
                 <%= follower_count(current_user) %>
               </div>
+              <% if user_signed_in? %>
               <h6 class="color-grey">Followers<h6>
+              <% end %>
             </div>
             <div class= "text-center follow ps-2">
               <div class= "color-text">
                 <%= following_count(current_user) %>
               </div>
+              <% if user_signed_in? %>
               <h6 class="color-grey">Following<h6>
+              <% end %>
             </div>
           </div>
           <% if user_signed_in? %>
