@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: ddzghvmbf
+  api_key: '244121929192822'
+  api_secret: jSePI6FG6EnsPl7b-KDnRLKUAOs
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: ddzghvmbf
+  api_key: '244121929192822'
+  api_secret: jSePI6FG6EnsPl7b-KDnRLKUAOs
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: ddzghvmbf
+  api_key: '244121929192822'
+  api_secret: jSePI6FG6EnsPl7b-KDnRLKUAOs
+  enhance_image_tag: true
+  static_file_support: false
