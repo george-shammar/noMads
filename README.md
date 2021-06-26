@@ -25,7 +25,7 @@
 - Active storage
 
 ## Live Demo
-[Deployed app](https://evening-wave-65441.herokuapp.com/)
+[Deployed app](https://safe-fortress-38104.herokuapp.com/)
 
 ## Getting Started
 
